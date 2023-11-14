@@ -1,0 +1,124 @@
+/* App.module.css */
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* Replace with your actual logo background color */
+    /* background: #212121; */
+    background: linear-gradient(to right, #212121, #7a6f65, #ffffff);
+
+  }
+
+  
+
+  .App {
+    min-height: 100vh;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradientBackground 15s ease infinite;
+  }
+  
+  
+
+  
+  .logo {
+    height: 64px; /* Set the image height to match the header height */
+  }
+  
+  .content {
+    height: calc(100% - 64px);
+    padding: 20px;
+    overflow-y: auto;
+    background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,1)), /* Vertical gradient */
+                linear-gradient(to right, #212121, #7a6f65, #ffffff); /* Horizontal gradient */
+    background-blend-mode: multiply;
+    animation: gradientBackground 15s ease infinite;
+  }
+  
+  /* Replace with your actual theme color */
+  .primaryButton {
+    font-weight: bold; /* Make the text bold */
+    background: #212121;
+    border-color: #212121;
+    border: 2px solid #68205d; /* Golden border */
+    color: rgb(208, 109, 109); /* Golden text */
+  }
+  
+  .inputWidth {
+    width: calc(100% - 100px); /* Adjust the width to make room for the button */
+  }
+  
+
+  /* App.css or App.module.css */
+
+/* General card styling */
+.nftCard {
+    border-radius: 10px;
+    overflow: hidden;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .nftCard:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Image styling */
+  .nftImage {
+    width: 100%;
+    object-fit: cover; /* Maintain aspect ratio */
+    height: 250px; /* Example fixed height */
+  }
+  
+  /* Typography */
+  .nftTitle {
+    font-family: 'Your Custom Font', sans-serif;
+    font-size: 1.2rem;
+    color: #333;
+  }
+  
+  .nftDescription {
+    font-size: 1rem;
+    line-height: 1.4;
+    color: #666;
+  }
+  
+  /* Interactive elements */
+  .nftButton {
+    background-color: #ff4081;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .nftButton:hover {
+    background-color: #f50057;
+  }
+  
+  /* Layout and spacing */
+  .nftCardContent {
+    padding: 15px;
+  }
+  
+/* In your App.module.css */
+
+
+.contactLink {
+  color: #ffd700; /* Golden color for links */
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.contactLink:hover {
+  color: #ffffff; /* Lighter color on hover */
+}
+
+.footer {
+  text-align: center;
+  padding: 20px;
+  background: linear-gradient(to right, #212121, #7a6f65, #ffffff);
+  color: #ffffff;
+}
+ 
+  

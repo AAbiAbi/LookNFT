@@ -1,38 +1,143 @@
-.App {
-  text-align: center;
+/* App.css */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Use the color palette defined in the theme */
+:root {
+  --primary-color: #B17A50;
+  --secondary-color: #212121;
+  --accent-color: #c19573;
+  --light-color: #ffffff;
+  --dark-color: #212121;
+  --light-accent: #8e6240;
+  --gray-background: #e6e6e6;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Header Styles */
+header {
+  background-color: var(--primary-color);
+  color: var(--light-color);
+  padding: 1rem;
+  font-size: 1.5rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Main Styles */
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh; /* Adjust height as needed */
+  background-color: var(--gray-background);
+}
+
+/* Input and Button Styles */
+input {
+  border: 2px solid var(--accent-color);
+  color: var(--dark-color);
+}
+
+button {
+  background-color: var(--primary-color);
+  color: var(--light-color);
+  border: 2px solid var(--light-accent);
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--light-accent);
+}
+
+/* Additional Layout Styles */
+.Flex {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  min-height: 100vh;
 }
 
-.App-link {
-  color: #61dafb;
+.Box {
+  display: block;
+  width: 100%;
 }
 
-@keyframes App-logo-spin {
+.InputGroup {
+  display: flex;
+  flex-direction: row;
+}
+
+.InputRightAddon {
+  margin-left: -1px; /* Align with the input */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .InputGroup input,
+  .InputGroup button {
+    width: 100%;
+  }
+  .InputRightAddon {
+    flex-direction: column;
+  }
+}
+
+/* Gradient Text Animation */
+@keyframes gradientBackground {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.gradient-text {
+  font-size: 16px;
+  font-weight: 600;
+  background: linear-gradient(to right, #ee71d7, #68205d, rgb(208, 109, 109));
+  background-size: 400% 400%;
+  animation: gradientBackground 15s ease infinite;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Signal Icon Container */
+.signal-icon-container {
+  position: relative;
+  display: inline-block;
+  width: 50px; /* Adjust as needed */
+  height: 50px; /* Adjust as needed */
+}
+
+.signal-icon-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to right, #ffffff, rgba(104, 103, 103, 0));
+  mix-blend-mode: multiply;
+}
+
+/* Fade Up Animation */
+@keyframes fadeUp {
   from {
-    transform: rotate(0deg);
+    opacity: 0;
+    transform: translateY(20px);
   }
   to {
-    transform: rotate(360deg);
+    opacity: 1;
+    transform: translateY(0);
   }
+}
+
+.fade-up-enter {
+  animation: fadeUp 0.5s ease forwards;
 }
