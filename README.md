@@ -7,9 +7,20 @@
                           |
                        NftTransfer   
 
-## Dataflow
+
 
 ## Get data
+Moralis provided api
+
+## url
+
+Depoly by AWS amplifier
+
+https://abi.d1usgksj0ny6dl.amplifyapp.com/
+
+## Virtual DOM
+
+Every React component is like a function, the return part(JSX) will generate virtual DOM.
   
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
