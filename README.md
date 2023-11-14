@@ -1,7 +1,11 @@
 # Getting Started with Create React App
 
 ## Component Tree
-  App
+                      App
+                      / \
+        ContractTrades  NftCard
+                          |
+                       NftTransfer   
 
 ## Dataflow
 
